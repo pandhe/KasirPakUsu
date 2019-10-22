@@ -18,6 +18,18 @@
         </activity>
         <activity android:name=".QrcodeActivity" />
         <activity android:name=".WebActivity" />
+        <service
+            android:name=".myfirebase.firebase_message"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".myfirebase.firebase_id">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
 
         <meta-data
             android:name="preloaded_fonts"
